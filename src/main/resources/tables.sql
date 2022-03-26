@@ -4,12 +4,12 @@ CREATE TABLE IF NOT EXISTS hospitals (
     country_code TEXT NOT NULL,
     address TEXT NOT NULL,
     map_link TEXT,
-    contact_prson_id INTEGER NOT NULL,
+    contact_person_id INTEGER NOT NULL,
     phone TEXT NOT NULL,
     supported_languages TEXT NOT NULL,
     translated_languages TEXT,
     admission_protocol TEXT,
-    famility_accomodation_id INTEGER,
+    family_accomodation_id INTEGER,
     comments TEXT
 );
 
