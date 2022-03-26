@@ -2,3 +2,7 @@ logging:
   level: INFO
   loggers:
     healthcare-matcher: DEBUG
+
+database:
+  driverClass: org.sqlite.JDBC
+  url: jdbc:sqlite:main.db
