@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS hospitals (
     supported_languages TEXT NOT NULL,
     translated_languages TEXT,
     admission_protocol TEXT,
-    family_accomodation_id INTEGER,
+    family_accommodation_id INTEGER,
     comments TEXT
 );
 
