@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS hospitals (
     id INTEGER NOT NULL PRIMARY KEY,
     name TEXT NOT NULL,
+    country_code TEXT NOT NULL,
     address TEXT NOT NULL,
     map_link TEXT,
     contact_prson_id INTEGER NOT NULL,
