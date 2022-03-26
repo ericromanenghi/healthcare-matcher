@@ -1,27 +1,27 @@
-package healthcare-matcher;
+package org.healthcare.matcher;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class healthcare-matcherApplication extends Application<healthcare-matcherConfiguration> {
+public class HealthcareMatcherApplication extends Application<HealthcareMatcherConfiguration> {
 
     public static void main(final String[] args) throws Exception {
-        new healthcare-matcherApplication().run(args);
+        new HealthcareMatcherApplication().run(args);
     }
 
     @Override
     public String getName() {
-        return "healthcare-matcher";
+        return "HealthcareMatcher";
     }
 
     @Override
-    public void initialize(final Bootstrap<healthcare-matcherConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<HealthcareMatcherConfiguration> bootstrap) {
         // TODO: application initialization
     }
 
     @Override
-    public void run(final healthcare-matcherConfiguration configuration,
+    public void run(final HealthcareMatcherConfiguration configuration,
                     final Environment environment) {
         // TODO: implement application
     }
