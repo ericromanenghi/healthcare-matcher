@@ -7,6 +7,8 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.healthcare.matcher.repositories.HospitalRepository;
 import org.healthcare.matcher.repositories.daos.HospitalDao;
+import org.healthcare.matcher.repositories.daos.SpecializedUnitDao;
+import org.healthcare.matcher.repositories.daos.SpecializedUnitMapDao;
 import org.healthcare.matcher.resources.HospitalResource;
 import org.jdbi.v3.core.Jdbi;
 
@@ -31,7 +33,8 @@ public class HealthcareMatcherApplication extends Application<HealthcareMatcherC
                     final Environment environment) {
         final JdbiFactory factory = new JdbiFactory();
         final Jdbi jdbi = factory.build(environment, configuration.getDataSourceFactory(), "sqlite");
-        environment.jersey().register(new HospitalResource(new HospitalRepository(jdbi.onDemand(HospitalDao.class))));
+        environment.jersey().register(new HospitalResource(new HospitalRepository(jdbi.onDemand(HospitalDao.class),
+                jdbi.onDemand(SpecializedUnitDao.class), jdbi.onDemand(SpecializedUnitMapDao.class))));
     }
 
 }

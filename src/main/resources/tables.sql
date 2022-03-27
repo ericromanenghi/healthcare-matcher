@@ -26,8 +26,13 @@ CREATE TABLE IF NOT EXISTS specialized_units (
 CREATE TABLE IF NOT EXISTS hospital_specialized_units_map (
     hospital_id INTEGER NOT NULL,
     unit_id INTEGER NOT NULL,
-    active BOOLEAN
+    active BOOLEAN,
+    PRIMARY KEY("hospital_id","unit_id")
 );
+
+CREATE INDEX "specialized_unit_by_hospital" ON "hospital_specialized_units_map" (
+    "hospital_id"
+)
 
 CREATE TABLE IF NOT EXISTS hospital_capabilities (
     id INTEGER NOT NULL PRIMARY KEY,
