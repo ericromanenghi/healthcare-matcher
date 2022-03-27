@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.db.DataSourceFactory;
 
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+
 
 public class HealthcareMatcherConfiguration extends Configuration {
     @Valid

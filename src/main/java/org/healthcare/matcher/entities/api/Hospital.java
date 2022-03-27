@@ -1,7 +1,5 @@
 package org.healthcare.matcher.entities.api;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Value;
 
 import java.util.Arrays;
